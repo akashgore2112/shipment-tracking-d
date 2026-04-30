@@ -193,13 +193,16 @@ export default function Home() {
             </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-500">
-              <span className="font-medium text-slate-700">Reference number:</span>
+              <span className="font-medium text-slate-700">Example:</span>
+              <code className="rounded-full bg-white px-3 py-1.5 font-semibold text-[#da2328] shadow-sm">
+                EE123456789CN
+              </code>
               <button
                 type="button"
                 onClick={applyExampleTracking}
-                className="rounded-full bg-white px-3 py-1.5 font-semibold text-[#da2328] shadow-sm transition hover:bg-[#fff5f5]"
+                className="rounded-full border border-slate-200 bg-white px-3 py-1.5 font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-900"
               >
-                {DEMO_TRACKING_NUMBER}
+                Load sample shipment
               </button>
               <a
                 href="#support"
