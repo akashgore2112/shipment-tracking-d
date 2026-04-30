@@ -11,21 +11,21 @@ type SearchState = "idle" | "loading" | "found" | "not-found";
 
 const serviceCards = [
   {
-    title: "Express Road Cargo",
+    title: "Road Express Freight",
     description:
-      "Time-sensitive cross-border cargo with scheduled road departures, customs coordination, and final-mile delivery visibility.",
+      "Scheduled cross-border freight for China, Nepal, India, Bangladesh, and UAE-linked forwarding partners with route-level tracking.",
     href: "#track"
   },
   {
-    title: "Business Consolidation",
+    title: "Supplier Consolidation",
     description:
-      "Supplier pickup, carton consolidation, document matching, and freight planning for repeat import shipments.",
+      "Pickup, carton merge, invoice matching, and dispatch planning for business cargo moving from multiple supplier points.",
     href: "#coverage"
   },
   {
-    title: "Customs Assistance",
+    title: "Customs Coordination",
     description:
-      "Pre-alerts, document review, government screening updates, and clearance escalation support for Nepal-bound freight.",
+      "Pre-alerts, document checks, policy updates, and hold-case follow-up for Nepal, India, Bangladesh, and transit-bound consignments.",
     href: "#support"
   }
 ];
@@ -33,16 +33,50 @@ const serviceCards = [
 const laneCards = [
   {
     title: "Guangzhou -> Kathmandu",
-    detail: "Daily intake | 7-12 transit days | customs-sensitive route"
+    detail: "Consumer goods and commercial cargo | road express | customs-sensitive"
   },
   {
-    title: "Yiwu -> Kathmandu",
-    detail: "Commercial cargo lane | pickup to border coordination"
+    title: "Yiwu -> Delhi",
+    detail: "Commercial dispatch lane | supplier pickup | document coordination"
   },
   {
-    title: "Kunming -> Nepal Border",
-    detail: "Road relay network | export consolidation support"
+    title: "Shenzhen -> Dhaka",
+    detail: "Consolidated freight | screening-led release | partner handover"
   }
+];
+
+const countryCards = [
+  {
+    name: "China",
+    note: "Origin pickups, export handling, consolidation warehouses"
+  },
+  {
+    name: "Nepal",
+    note: "Border intake, customs review, Kathmandu final-mile release"
+  },
+  {
+    name: "India",
+    note: "Commercial freight lanes, route planning, inland delivery support"
+  },
+  {
+    name: "Bangladesh",
+    note: "Import processing with partner forwarding coordination"
+  },
+  {
+    name: "UAE",
+    note: "Support desk visibility for forwarding, billing, and consignee follow-up"
+  },
+  {
+    name: "Hong Kong",
+    note: "Supplier routing and export handover for select cargo classes"
+  }
+];
+
+const networkStats = [
+  { label: "Coverage Markets", value: "6+" },
+  { label: "Active Lanes", value: "18" },
+  { label: "Customs Updates", value: "Daily" },
+  { label: "Delivery Visibility", value: "End-to-end" }
 ];
 
 const supportCards = [
@@ -63,11 +97,30 @@ const supportCards = [
   }
 ];
 
+const footerColumns = [
+  {
+    title: "Company",
+    links: ["About Network", "Transit Standards", "Business Accounts"]
+  },
+  {
+    title: "Services",
+    links: ["Shipment Tracking", "Cargo Consolidation", "Customs Support"]
+  },
+  {
+    title: "Coverage",
+    links: ["China Origin", "South Asia Lanes", "Destination Support Desks"]
+  },
+  {
+    title: "Support",
+    links: ["Tracking Help", "Delivery Follow-Up", "Billing Questions"]
+  }
+];
+
 const portalHighlights = [
-  "Customs-aware timeline updates",
-  "Cross-border route visibility",
-  "Responsive shipment dashboard",
-  "Service and support sections"
+  "Shipment milestones",
+  "Country coverage",
+  "Customs advisory",
+  "Support workflow"
 ];
 
 export default function Home() {
@@ -118,15 +171,15 @@ export default function Home() {
           <div className="flex flex-col justify-center">
             <div className="max-w-xl">
               <span className="inline-flex rounded-full border border-[#f6c4c5] bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#da2328]">
-                Live Cross-Border Tracking Portal
+                Cross-Border Logistics Network
               </span>
               <h2 className="mt-5 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-                Track customs delays, route milestones, and expected delivery from one page.
+                Shipment tracking, customs status, and regional coverage in one portal.
               </h2>
               <p className="mt-4 max-w-lg text-base leading-7 text-slate-600 sm:text-lg">
-                Enter your waybill number to view the latest cargo movement,
-                customs review status, delivery estimate, and a realistic
-                shipment timeline designed like a production logistics portal.
+                Enter a waybill number to check cargo movement, pending
+                clearance, route milestones, and expected delivery across major
+                South Asia and China-linked freight corridors.
               </p>
             </div>
 
@@ -140,7 +193,7 @@ export default function Home() {
             </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-500">
-              <span className="font-medium text-slate-700">Demo tracking:</span>
+              <span className="font-medium text-slate-700">Reference number:</span>
               <button
                 type="button"
                 onClick={applyExampleTracking}
@@ -152,41 +205,58 @@ export default function Home() {
                 href="#support"
                 className="rounded-full border border-slate-200 bg-white px-3 py-1.5 font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-900"
               >
-                Clearance support
+                Shipment support
               </a>
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <a
                 href="#coverage"
-                className="rounded-[28px] border border-white/80 bg-white/85 p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_70px_rgba(15,23,42,0.12)]"
+                className="rounded-[28px] border border-white/80 bg-white/85 p-5 shadow-[0_14px_34px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)]"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#da2328]">
-                  Active Lane
+                  Coverage
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-slate-950">
-                  China to Nepal road line-haul
+                  China, Nepal, India, Bangladesh, UAE
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Scheduled border intake, customs review staging, and local
-                  delivery release after clearance.
+                  Multi-country routing, customs visibility, and consignee-side
+                  delivery support.
                 </p>
               </a>
               <a
                 href="#services"
-                className="rounded-[28px] border border-white/80 bg-[linear-gradient(135deg,#fff5f5_0%,#ffffff_100%)] p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_70px_rgba(15,23,42,0.12)]"
+                className="rounded-[28px] border border-white/80 bg-[linear-gradient(135deg,#fff5f5_0%,#ffffff_100%)] p-5 shadow-[0_14px_34px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)]"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#da2328]">
-                  Customs Advisory
+                  Operations
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-slate-950">
-                  Updated import screening in effect
+                  Clearance checks and dispatch planning
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Government policy checks are increasing verification time on
-                  selected inbound freight documents.
+                  Live customs remarks, policy-led delays, and route release
+                  planning for held cargo.
                 </p>
               </a>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              {networkStats.map((stat) => (
+                <a
+                  key={stat.label}
+                  href="#coverage"
+                  className="rounded-2xl border border-slate-100 bg-white/80 px-4 py-4 text-left shadow-sm transition hover:border-slate-200 hover:bg-white"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                    {stat.label}
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-slate-950">
+                    {stat.value}
+                  </p>
+                </a>
+              ))}
             </div>
           </div>
 
@@ -206,8 +276,8 @@ export default function Home() {
                     Enter a tracking number to view shipment progress.
                   </h3>
                   <p className="mt-3 max-w-xl text-slate-600">
-                    This portal shows route milestones, customs holds, delay
-                    reasons, and delivery planning in one place.
+                    Check route milestones, customs holds, destination coverage,
+                    and delivery planning from the same dashboard.
                   </p>
                   <div className="mt-8 grid gap-4 sm:grid-cols-3">
                     {portalHighlights.map((item) => (
@@ -236,7 +306,7 @@ export default function Home() {
                 Services
               </p>
               <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
-                Built like a real freight support page
+                Core services used across regional cargo lanes
               </h3>
             </div>
             <a
@@ -276,12 +346,13 @@ export default function Home() {
                 Policy Update
               </p>
               <h4 className="mt-3 text-2xl font-semibold text-slate-950">
-                Additional customs screening is affecting selected imports
+                Country-specific import screening can extend release times
               </h4>
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                Shipments under review may remain in customs longer while
-                revised government checks are applied to invoice matching,
-                consignee details, and import category screening.
+                Customs release timelines vary by destination. Nepal, India,
+                and Bangladesh inbound freight may pause longer when invoice
+                review, consignee verification, or updated screening rules are
+                triggered.
               </p>
             </a>
             <div className="rounded-[30px] border border-slate-100 bg-slate-50/90 p-6 shadow-sm">
@@ -290,8 +361,8 @@ export default function Home() {
               </p>
               <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-700">
                 <li>Cut-off before departure: 16:00 CN warehouse time</li>
-                <li>Customs exception cases receive manual timeline updates</li>
-                <li>Final-mile release begins only after border clearance</li>
+                <li>Country exception cases receive manual tracking updates</li>
+                <li>Final-mile release begins only after local customs handover</li>
               </ul>
             </div>
           </div>
@@ -306,7 +377,7 @@ export default function Home() {
               Coverage
             </p>
             <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
-              Active road cargo lanes and destination handling
+              Regional lanes and destination support network
             </h3>
             <div className="mt-8 grid gap-4">
               {laneCards.map((lane) => (
@@ -322,6 +393,23 @@ export default function Home() {
                 </a>
               ))}
             </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {countryCards.map((country) => (
+                <a
+                  key={country.name}
+                  href="#support"
+                  className="rounded-2xl border border-slate-100 bg-white px-4 py-4 transition hover:border-slate-200 hover:bg-slate-50"
+                >
+                  <p className="text-sm font-semibold text-slate-950">
+                    {country.name}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    {country.note}
+                  </p>
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="rounded-[36px] border border-white/70 bg-[linear-gradient(180deg,#fff7f7_0%,#ffffff_100%)] p-6 shadow-[0_22px_70px_rgba(15,23,42,0.08)] backdrop-blur sm:p-8">
@@ -329,28 +417,29 @@ export default function Home() {
               Live Advisory
             </p>
             <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
-              Nepal customs review is still the current bottleneck
+              Customs release timing depends on destination country
             </h3>
             <p className="mt-4 text-sm leading-7 text-slate-600">
-              Current held shipments may experience a 2 to 4 day delay when new
-              government verification layers are triggered. Tracking updates are
-              published after carrier confirmation and customs queue movement.
+              Held shipments can experience a 2 to 4 day delay when destination
+              customs authorities apply additional screening. Update frequency
+              depends on carrier confirmation and queue movement in the relevant
+              country.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <div className="rounded-2xl border border-[#f7d0d1] bg-white px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  Clearance Window
+                  Nepal / India
                 </p>
                 <p className="mt-2 text-sm font-semibold text-slate-900">
-                  24 to 72 hours after policy review starts
+                  Border-led review with manual document checks
                 </p>
               </div>
               <div className="rounded-2xl border border-[#f7d0d1] bg-white px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  Delivery Projection
+                  Bangladesh / UAE
                 </p>
                 <p className="mt-2 text-sm font-semibold text-slate-900">
-                  Next dispatch after customs release
+                  Partner handover and destination release visibility
                 </p>
               </div>
             </div>
@@ -367,7 +456,7 @@ export default function Home() {
                 Support
               </p>
               <h3 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
-                Delay help, shipment questions, and delivery follow-up
+                Shipment help, customs follow-up, and country desk support
               </h3>
             </div>
             <a
@@ -409,8 +498,8 @@ export default function Home() {
                     Why is my shipment still in customs?
                   </p>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Extra government screening, missing document verification, or
-                    customs queue congestion can extend release time.
+                    Government screening, missing document verification, or
+                    destination queue congestion can extend release time.
                   </p>
                 </a>
                 <a
@@ -433,20 +522,86 @@ export default function Home() {
                 Contact Window
               </p>
               <h4 className="mt-3 text-xl font-semibold text-slate-950">
-                Tracking desk available for clearance follow-up
+                Regional tracking desk available for clearance follow-up
               </h4>
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                Responses for customs-delay shipments are typically posted after
-                carrier confirmation and border desk verification.
+                Responses for held shipments are posted after carrier
+                confirmation and country-desk verification for the destination
+                market.
               </p>
               <div className="mt-6 space-y-3 text-sm text-slate-700">
                 <p>Support hours: 09:00 to 19:00 Nepal time</p>
                 <p>Update cycle: after customs remark or route release</p>
-                <p>Escalation: held import shipments only</p>
+                <p>Coverage desks: Nepal, India, Bangladesh, UAE, China</p>
               </div>
             </div>
           </div>
         </section>
+
+        <footer className="mt-10 rounded-[36px] border border-slate-200 bg-slate-950 px-6 py-8 text-slate-200 shadow-[0_22px_70px_rgba(15,23,42,0.16)] sm:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">
+                Longma Cargo Express
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold text-white">
+                Regional shipment tracking and cross-border cargo support
+              </h3>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
+                Shipment updates, customs remarks, destination support, and
+                route visibility for China-linked cargo moving across Nepal,
+                India, Bangladesh, UAE partner desks, and surrounding trade
+                corridors.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3 text-sm">
+                <a
+                  href="#track"
+                  className="rounded-full bg-white/10 px-4 py-2 transition hover:bg-white/15"
+                >
+                  Track Shipment
+                </a>
+                <a
+                  href="#coverage"
+                  className="rounded-full bg-white/10 px-4 py-2 transition hover:bg-white/15"
+                >
+                  Branch Locator
+                </a>
+                <a
+                  href="#support"
+                  className="rounded-full bg-white/10 px-4 py-2 transition hover:bg-white/15"
+                >
+                  Contact Desk
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2">
+              {footerColumns.map((column) => (
+                <div key={column.title}>
+                  <p className="text-sm font-semibold text-white">
+                    {column.title}
+                  </p>
+                  <div className="mt-3 space-y-2 text-sm text-slate-300">
+                    {column.links.map((link) => (
+                      <a
+                        key={link}
+                        href="#track"
+                        className="block transition hover:text-white"
+                      >
+                        {link}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+            <p>Operations desk hours: Mon-Sat, 09:00-19:00 regional support time</p>
+            <p>Tracking updates posted after carrier and customs confirmation</p>
+          </div>
+        </footer>
       </div>
     </main>
   );

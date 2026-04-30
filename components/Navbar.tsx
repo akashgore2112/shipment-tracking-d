@@ -5,10 +5,34 @@ const navItems = [
   { label: "Support", href: "#support" }
 ];
 
+const utilityItems = [
+  { label: "Track Shipment", href: "#track" },
+  { label: "Rate Request", href: "#services" },
+  { label: "Branch Locator", href: "#coverage" },
+  { label: "Contact Desk", href: "#support" }
+];
+
 export default function Navbar() {
   return (
     <nav className="mb-10 rounded-[28px] border border-white/70 bg-white/80 px-5 py-4 shadow-[0_18px_60px_rgba(15,23,42,0.08)] backdrop-blur sm:px-7">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div className="border-b border-slate-100 pb-3">
+        <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-medium text-slate-500">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            {utilityItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="rounded-full bg-slate-50 px-3 py-1.5 transition hover:bg-slate-100 hover:text-slate-800"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <p className="text-slate-400">Regional cargo desk | Mon-Sat</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4 pt-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#ef4444_0%,#da2328_62%,#991b1b_100%)] text-white shadow-[0_12px_30px_rgba(218,35,40,0.35)] ring-1 ring-white/20">
             <svg

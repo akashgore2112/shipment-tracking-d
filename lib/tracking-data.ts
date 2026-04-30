@@ -19,6 +19,13 @@ export type TrackingRecord = {
   shipmentMode: string;
   packageCount: string;
   weight: string;
+  commodity: string;
+  hsnCode: string;
+  brandStatus: string;
+  declaredQuantity: string;
+  materialComposition: string;
+  countryOfOrigin: string;
+  invoiceValue: string;
   lastUpdated: string;
   delayHeadline: string;
   delayReason: string;
@@ -38,8 +45,15 @@ export const demoTrackingRecord: TrackingRecord = {
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
   shipmentMode: "Consolidated Cargo",
-  packageCount: "3 cartons",
-  weight: "42.6 kg",
+  packageCount: "8 cartons",
+  weight: "108.7 kg",
+  commodity: "Women’s woven and knit apparel, unbranded",
+  hsnCode: "HSN 6204 / 6104",
+  brandStatus: "Non-branded ready-made garments",
+  declaredQuantity: "122 pcs",
+  materialComposition: "Mixed cotton and polyester garments",
+  countryOfOrigin: "China",
+  invoiceValue: "USD 2,530.00",
   lastUpdated: "2026-04-30 12:10:00",
   delayHeadline: "Clearance delayed due to updated customs policy",
   delayReason:

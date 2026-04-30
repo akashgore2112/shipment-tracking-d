@@ -15,7 +15,14 @@ export default function TrackingResult({ record }: TrackingResultProps) {
     { label: "Destination", value: record.destination },
     { label: "Mode", value: record.shipmentMode },
     { label: "Packages", value: record.packageCount },
-    { label: "Chargeable Weight", value: record.weight }
+    { label: "Chargeable Weight", value: record.weight },
+    { label: "Commodity", value: record.commodity },
+    { label: "HSN Code", value: record.hsnCode },
+    { label: "Goods Type", value: record.brandStatus },
+    { label: "Declared Quantity", value: record.declaredQuantity },
+    { label: "Material", value: record.materialComposition },
+    { label: "Country of Origin", value: record.countryOfOrigin },
+    { label: "Invoice Value", value: record.invoiceValue }
   ];
 
   return (
