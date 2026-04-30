@@ -22,7 +22,10 @@ export default function TrackingResult({ record }: TrackingResultProps) {
     { label: "Declared Quantity", value: record.declaredQuantity },
     { label: "Material", value: record.materialComposition },
     { label: "Country of Origin", value: record.countryOfOrigin },
-    { label: "Invoice Value", value: record.invoiceValue }
+    { label: "Invoice Value", value: record.invoiceValue },
+    { label: "Customs Office", value: record.customsOffice },
+    { label: "Customs Address", value: record.customsOfficeAddress },
+    { label: "After Release", value: record.postClearanceTransit }
   ];
 
   return (

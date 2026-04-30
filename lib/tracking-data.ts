@@ -26,6 +26,9 @@ export type TrackingRecord = {
   materialComposition: string;
   countryOfOrigin: string;
   invoiceValue: string;
+  customsOffice: string;
+  customsOfficeAddress: string;
+  postClearanceTransit: string;
   lastUpdated: string;
   delayHeadline: string;
   delayReason: string;
@@ -54,12 +57,15 @@ export const demoTrackingRecord: TrackingRecord = {
   materialComposition: "Mixed cotton and polyester garments",
   countryOfOrigin: "China",
   invoiceValue: "USD 2,530.00",
-  lastUpdated: "2026-04-30 12:10:00",
-  delayHeadline: "Clearance delayed due to updated customs policy",
+  customsOffice: "Rasuwa Customs Office",
+  customsOfficeAddress: "Timure, Rasuwa, Nepal",
+  postClearanceTransit: "6-10 hours to Kathmandu delivery hub after customs release",
+  lastUpdated: "2026-04-30 16:45:00",
+  delayHeadline: "Held for customs verification at Rasuwa",
   delayReason:
-    "Nepal inbound customs is applying updated government import screening rules, so this shipment is waiting for an extended verification check before release.",
+    "Shipment is under import document verification at Rasuwa Customs Office, Timure. Release is pending due to updated screening checks for inbound cargo before onward movement to Kathmandu.",
   supportMessage:
-    "Sorry for the delay. Our team is monitoring the clearance queue and the shipment will move to local delivery as soon as customs releases it.",
+    "Sorry for the delay. After customs release, road movement to the Kathmandu delivery hub is expected to take 6-10 hours depending on dispatch queue and road conditions.",
   events: [
     {
       timestamp: "2026-03-20 10:05:00",
@@ -134,21 +140,21 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-30 12:10:00",
+      timestamp: "2026-04-30 16:45:00",
       dateLabel: "2026-04-30",
-      timeLabel: "12:10:00",
-      status: "Nepal Customs Hold",
+      timeLabel: "16:45:00",
+      status: "Held at Rasuwa Customs",
       description:
-        "Shipment remains under customs review today and release is pending after updated government policy checks were added to the import clearance workflow.",
+        "Shipment remains at Rasuwa Customs Office, Timure for import document verification. Once released, the carrier will dispatch it toward the Kathmandu delivery hub with an expected road transit time of 6-10 hours.",
       stage: "current"
     },
     {
-      timestamp: "2026-05-01 15:00:00",
+      timestamp: "2026-05-01 07:00:00",
       dateLabel: "2026-05-01",
-      timeLabel: "15:00:00",
+      timeLabel: "07:00:00",
       status: "Customs Re-Verification",
       description:
-        "Customs is expected to complete the revised document and screening review on May 1, 2026 if no additional inspection note is raised.",
+        "Shipment remains at Rasuwa Customs Office, Timure for import document verification. Once released, the carrier will dispatch it toward the Kathmandu delivery hub with an expected road transit time of 6-10 hours.",
       stage: "upcoming"
     },
     {
