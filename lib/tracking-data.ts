@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Customs Clearance Pending",
-  deliveryLabel: "Expected delivery by 2026-05-03",
-  estimatedDelivery: "2026-05-03",
-  progressPercent: 79,
+  latestStatus: "Customs Cleared",
+  deliveryLabel: "Expected delivery by 2026-05-05",
+  estimatedDelivery: "2026-05-05",
+  progressPercent: 86,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,13 +59,13 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "6-10 hours to Kathmandu delivery hub after customs release",
-  lastUpdated: "2026-04-30 16:45:00",
-  delayHeadline: "Held for customs verification at Rasuwa",
+  postClearanceTransit: "Scheduled departure on 2026-05-02; 6-10 hours to Kathmandu after dispatch",
+  lastUpdated: "2026-05-01 16:20:00",
+  delayHeadline: "Customs clearance completed at Rasuwa",
   delayReason:
-    "Shipment is under import document verification at Rasuwa Customs Office, Timure. Release is pending due to updated screening checks for inbound cargo before onward movement to Kathmandu.",
+    "Customs clearance has been completed at Rasuwa Customs Office, Timure. The shipment is scheduled to depart from the customs area on May 2, 2026 and move toward the Kathmandu delivery hub.",
   supportMessage:
-    "Sorry for the delay. After customs release, road movement to the Kathmandu delivery hub is expected to take 6-10 hours depending on dispatch queue and road conditions.",
+    "We apologize for the delay. The hold was caused by customs verification outside the carrier's direct control, but because the delivery window was extended, a USD 200 service refund will be issued as a goodwill adjustment.",
   events: [
     {
       timestamp: "2026-03-20 10:05:00",
@@ -146,33 +146,33 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Held at Rasuwa Customs",
       description:
         "Shipment remains at Rasuwa Customs Office, Timure for import document verification. Once released, the carrier will dispatch it toward the Kathmandu delivery hub with an expected road transit time of 6-10 hours.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-05-01 16:20:00",
+      dateLabel: "2026-05-01",
+      timeLabel: "16:20:00",
+      status: "Customs Clearance Completed",
+      description:
+        "Customs clearance has been completed at Rasuwa Customs Office, Timure. The shipment is now awaiting carrier release from the customs yard and is scheduled to depart toward Kathmandu on May 2, 2026.",
       stage: "current"
     },
     {
-      timestamp: "2026-05-01 07:00:00",
-      dateLabel: "2026-05-01",
-      timeLabel: "07:00:00",
-      status: "Customs Re-Verification",
-      description:
-        "Shipment remains at Rasuwa Customs Office, Timure for import document verification. Once released, the carrier will dispatch it toward the Kathmandu delivery hub with an expected road transit time of 6-10 hours.",
-      stage: "upcoming"
-    },
-    {
-      timestamp: "2026-05-02 11:30:00",
+      timestamp: "2026-05-02 08:30:00",
       dateLabel: "2026-05-02",
-      timeLabel: "11:30:00",
-      status: "Transfer to Local Delivery Hub",
+      timeLabel: "08:30:00",
+      status: "Scheduled Departure from Rasuwa",
       description:
-        "After customs release, the shipment is expected to move to the Kathmandu local delivery hub for route assignment and dispatch planning.",
+        "Carrier dispatch is planned from Rasuwa Customs Office toward the Kathmandu delivery hub. Expected road movement after departure is 6-10 hours depending on route condition and dispatch queue.",
       stage: "upcoming"
     },
     {
-      timestamp: "2026-05-03 18:30:00",
-      dateLabel: "2026-05-03",
+      timestamp: "2026-05-05 18:30:00",
+      dateLabel: "2026-05-05",
       timeLabel: "18:30:00",
       status: "Expected Delivery",
       description:
-        "Shipment is projected to be delivered by May 3, 2026 once customs clearance is completed and the parcel is handed to the local delivery route.",
+        "Shipment is planned for delivery by May 5, 2026 after Kathmandu hub processing, route assignment, and final-mile dispatch.",
       stage: "upcoming"
     }
   ]

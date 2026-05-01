@@ -101,7 +101,7 @@ export default function TrackingResult({ record }: TrackingResultProps) {
               </p>
             </div>
             <span className="inline-flex items-center rounded-full border border-amber-300 bg-white px-3 py-1.5 text-sm font-semibold text-amber-700">
-              Customs delay
+              Clearance update
             </span>
           </div>
           <p className="mt-4 rounded-2xl bg-white/80 px-4 py-3 text-sm text-slate-700">
