@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Customs Cleared",
-  deliveryLabel: "Expected delivery by 2026-05-05",
-  estimatedDelivery: "2026-05-05",
-  progressPercent: 86,
+  latestStatus: "Out for Delivery",
+  deliveryLabel: "Delivery window: 2026-05-05 21:00 - 2026-05-06 11:00",
+  estimatedDelivery: "2026-05-06 11:00",
+  progressPercent: 96,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,13 +59,13 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "Scheduled departure on 2026-05-02; 6-10 hours to Kathmandu after dispatch",
-  lastUpdated: "2026-05-01 16:20:00",
-  delayHeadline: "Customs clearance completed at Rasuwa",
+  postClearanceTransit: "Released from customs and transferred to Kathmandu delivery operations",
+  lastUpdated: "2026-05-05 18:35:00",
+  delayHeadline: "Shipment released for final delivery",
   delayReason:
-    "Customs clearance has been completed at Rasuwa Customs Office, Timure. The shipment is scheduled to depart from the customs area on May 2, 2026 and move toward the Kathmandu delivery hub.",
+    "The shipment has cleared customs and completed Kathmandu hub processing. Final-mile delivery is now being arranged for the consignee, with delivery expected between 21:00 on May 5, 2026 and 11:00 on May 6, 2026.",
   supportMessage:
-    "We apologize for the delay. The hold was caused by customs verification outside the carrier's direct control, but because the delivery window was extended, a USD 200 service refund will be issued as a goodwill adjustment.",
+    "We apologize for the delay caused during customs verification. The shipment is now in the final delivery phase, and the delivery team will complete handover within the confirmed delivery window.",
   events: [
     {
       timestamp: "2026-03-20 10:05:00",
@@ -155,24 +155,33 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Customs Clearance Completed",
       description:
         "Customs clearance has been completed at Rasuwa Customs Office, Timure. The shipment is now awaiting carrier release from the customs yard and is scheduled to depart toward Kathmandu on May 2, 2026.",
-      stage: "current"
+      stage: "completed"
     },
     {
       timestamp: "2026-05-02 08:30:00",
       dateLabel: "2026-05-02",
       timeLabel: "08:30:00",
-      status: "Scheduled Departure from Rasuwa",
+      status: "Departed from Rasuwa Customs",
       description:
-        "Carrier dispatch is planned from Rasuwa Customs Office toward the Kathmandu delivery hub. Expected road movement after departure is 6-10 hours depending on route condition and dispatch queue.",
-      stage: "upcoming"
+        "Carrier dispatch departed from Rasuwa Customs Office toward the Kathmandu delivery hub after customs release and yard handover.",
+      stage: "completed"
     },
     {
-      timestamp: "2026-05-05 18:30:00",
+      timestamp: "2026-05-05 18:35:00",
       dateLabel: "2026-05-05",
-      timeLabel: "18:30:00",
-      status: "Expected Delivery",
+      timeLabel: "18:35:00",
+      status: "Out for Final Delivery",
       description:
-        "Shipment is planned for delivery by May 5, 2026 after Kathmandu hub processing, route assignment, and final-mile dispatch.",
+        "Shipment has completed Kathmandu hub processing and is assigned for final delivery. Delivery is expected between 21:00 on May 5, 2026 and 11:00 on May 6, 2026.",
+      stage: "current"
+    },
+    {
+      timestamp: "2026-05-06 11:00:00",
+      dateLabel: "2026-05-06",
+      timeLabel: "11:00:00",
+      status: "Expected Delivery Completion",
+      description:
+        "Delivery handover is expected to be completed by 11:00 on May 6, 2026, subject to consignee availability and local route conditions.",
       stage: "upcoming"
     }
   ]
