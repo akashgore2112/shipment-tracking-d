@@ -41,9 +41,9 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
   latestStatus: "Out for Delivery",
-  deliveryLabel: "Delivery window: 2026-05-05 21:00 - 2026-05-06 11:00",
-  estimatedDelivery: "2026-05-06 11:00",
-  progressPercent: 96,
+  deliveryLabel: "Expected delivery by 2026-05-07",
+  estimatedDelivery: "2026-05-07",
+  progressPercent: 98,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -60,12 +60,12 @@ export const demoTrackingRecord: TrackingRecord = {
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
   postClearanceTransit: "Released from customs and transferred to Kathmandu delivery operations",
-  lastUpdated: "2026-05-05 18:35:00",
-  delayHeadline: "Shipment released for final delivery",
+  lastUpdated: "2026-05-06 14:45:00",
+  delayHeadline: "Final delivery scheduled",
   delayReason:
-    "The shipment has cleared customs and completed Kathmandu hub processing. Final-mile delivery is now being arranged for the consignee, with delivery expected between 21:00 on May 5, 2026 and 11:00 on May 6, 2026.",
+    "The shipment is with the local delivery team after Kathmandu hub processing. Delivery is scheduled for today, May 6, 2026 by 20:00. If route timing or consignee availability causes a short extension, delivery will be completed by May 7, 2026.",
   supportMessage:
-    "We apologize for the delay caused during customs verification. The shipment is now in the final delivery phase, and the delivery team will complete handover within the confirmed delivery window.",
+    "We apologize for the delay caused during customs verification and final route assignment. The shipment is now in the final delivery phase, and the delivery team will complete handover by today evening or by May 7, 2026 at the latest.",
   events: [
     {
       timestamp: "2026-03-20 10:05:00",
@@ -173,15 +173,24 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Out for Final Delivery",
       description:
         "Shipment has completed Kathmandu hub processing and is assigned for final delivery. Delivery is expected between 21:00 on May 5, 2026 and 11:00 on May 6, 2026.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-05-06 14:45:00",
+      dateLabel: "2026-05-06",
+      timeLabel: "14:45:00",
+      status: "Delivery Scheduled for Today",
+      description:
+        "The shipment remains assigned to the local delivery team. Delivery is scheduled for today by 20:00, subject to route movement and consignee availability.",
       stage: "current"
     },
     {
-      timestamp: "2026-05-06 11:00:00",
-      dateLabel: "2026-05-06",
-      timeLabel: "11:00:00",
-      status: "Expected Delivery Completion",
+      timestamp: "2026-05-07 18:00:00",
+      dateLabel: "2026-05-07",
+      timeLabel: "18:00:00",
+      status: "Latest Delivery Commitment",
       description:
-        "Delivery handover is expected to be completed by 11:00 on May 6, 2026, subject to consignee availability and local route conditions.",
+        "If today's delivery route cannot be completed, the shipment will be delivered by May 7, 2026 as the latest committed delivery date.",
       stage: "upcoming"
     }
   ]
