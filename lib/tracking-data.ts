@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Out for Delivery",
-  deliveryLabel: "Expected delivery by 2026-05-07",
-  estimatedDelivery: "2026-05-07",
-  progressPercent: 98,
+  latestStatus: "Delivery Scheduled",
+  deliveryLabel: "Expected delivery by 13/05/2026",
+  estimatedDelivery: "13/05/2026",
+  progressPercent: 94,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -60,12 +60,12 @@ export const demoTrackingRecord: TrackingRecord = {
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
   postClearanceTransit: "Released from customs and transferred to Kathmandu delivery operations",
-  lastUpdated: "2026-05-06 14:45:00",
-  delayHeadline: "Final delivery scheduled",
+  lastUpdated: "09/05/2026 14:30:00",
+  delayHeadline: "Delivery scheduled",
   delayReason:
-    "The shipment is with the local delivery team after Kathmandu hub processing. Delivery is scheduled for today, May 6, 2026 by 20:00. If route timing or consignee availability causes a short extension, delivery will be completed by May 7, 2026.",
+    "The shipment is with the local delivery team after Kathmandu hub processing. Final delivery is scheduled by 13/05/2026.",
   supportMessage:
-    "We apologize for the delay caused during customs verification and final route assignment. The shipment is now in the final delivery phase, and the delivery team will complete handover by today evening or by May 7, 2026 at the latest.",
+    "The shipment is now in the final delivery phase. The delivery team will complete handover by 13/05/2026.",
   events: [
     {
       timestamp: "2026-03-20 10:05:00",
@@ -170,27 +170,45 @@ export const demoTrackingRecord: TrackingRecord = {
       timestamp: "2026-05-05 18:35:00",
       dateLabel: "2026-05-05",
       timeLabel: "18:35:00",
-      status: "Out for Final Delivery",
+      status: "Kathmandu Hub Processing",
       description:
-        "Shipment has completed Kathmandu hub processing and is assigned for final delivery. Delivery is expected between 21:00 on May 5, 2026 and 11:00 on May 6, 2026.",
+        "Shipment reached the Kathmandu delivery hub and was queued for local route planning.",
       stage: "completed"
     },
     {
-      timestamp: "2026-05-06 14:45:00",
-      dateLabel: "2026-05-06",
-      timeLabel: "14:45:00",
-      status: "Delivery Scheduled for Today",
+      timestamp: "2026-05-09 14:30:00",
+      dateLabel: "09/05/2026",
+      timeLabel: "14:30:00",
+      status: "Delivery Slot Confirmed",
       description:
-        "The shipment remains assigned to the local delivery team. Delivery is scheduled for today by 20:00, subject to route movement and consignee availability.",
+        "Shipment has been assigned to the local delivery team. Final delivery is scheduled by 13/05/2026.",
       stage: "current"
     },
     {
-      timestamp: "2026-05-07 18:00:00",
-      dateLabel: "2026-05-07",
-      timeLabel: "18:00:00",
-      status: "Latest Delivery Commitment",
+      timestamp: "2026-05-10 10:00:00",
+      dateLabel: "10/05/2026",
+      timeLabel: "10:00:00",
+      status: "Route Preparation",
       description:
-        "If today's delivery route cannot be completed, the shipment will be delivered by May 7, 2026 as the latest committed delivery date.",
+        "Package sorting and final route preparation are planned for Kathmandu delivery operations.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-05-12 16:00:00",
+      dateLabel: "12/05/2026",
+      timeLabel: "16:00:00",
+      status: "Final Dispatch Window",
+      description:
+        "Shipment is scheduled to move into the final dispatch window before consignee handover.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-05-13 18:00:00",
+      dateLabel: "13/05/2026",
+      timeLabel: "18:00:00",
+      status: "Expected Delivery",
+      description:
+        "Delivery is expected to be completed by 13/05/2026.",
       stage: "upcoming"
     }
   ]

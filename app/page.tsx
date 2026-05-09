@@ -533,7 +533,22 @@ export default function Home() {
                 market.
               </p>
               <div className="mt-6 space-y-3 text-sm text-slate-700">
-                <p>Support hours: 09:00 to 19:00 Nepal time</p>
+                <p>
+                  Email:{" "}
+                  <a
+                    href="mailto:support@longmacargoexpress.com"
+                    className="font-semibold text-slate-900 transition hover:text-[#b91c1c]"
+                  >
+                    support@longmacargoexpress.com
+                  </a>
+                </p>
+                <p>
+                  China desk:{" "}
+                  <span className="font-semibold text-slate-900">
+                    +86 10 5555 0138
+                  </span>
+                </p>
+                <p>Contact hours: Mon-Sat, 09:00 to 19:00 China Standard Time</p>
                 <p>Update cycle: after customs remark or route release</p>
                 <p>Coverage desks: Nepal, India, Bangladesh, UAE, China</p>
               </div>
@@ -601,7 +616,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-            <p>Operations desk hours: Mon-Sat, 09:00-19:00 regional support time</p>
+            <p>Operations desk hours: Mon-Sat, 09:00-19:00 China Standard Time</p>
             <p>Tracking updates posted after carrier and customs confirmation</p>
           </div>
         </footer>

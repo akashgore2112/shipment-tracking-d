@@ -91,17 +91,14 @@ export default function TrackingResult({ record }: TrackingResultProps) {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
-                Delay Notice
+                Delivery Notice
               </p>
               <h4 className="mt-2 text-lg font-semibold text-slate-900">
                 {record.delayHeadline}
               </h4>
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                {record.delayReason}
-              </p>
             </div>
             <span className="inline-flex items-center rounded-full border border-amber-300 bg-white px-3 py-1.5 text-sm font-semibold text-amber-700">
-              Clearance update
+              Delivery update
             </span>
           </div>
           <p className="mt-4 rounded-2xl bg-white/80 px-4 py-3 text-sm text-slate-700">
