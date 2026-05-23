@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Delivery Scheduled",
-  deliveryLabel: "Expected delivery by 13/05/2026",
-  estimatedDelivery: "13/05/2026",
-  progressPercent: 94,
+  latestStatus: "Customs Policy Review",
+  deliveryLabel: "Expected delivery by 02/06/2026",
+  estimatedDelivery: "02/06/2026",
+  progressPercent: 72,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,17 +59,17 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "Released from customs and transferred to Kathmandu delivery operations",
-  lastUpdated: "09/05/2026 14:30:00",
-  delayHeadline: "Delivery scheduled",
+  postClearanceTransit: "Pending customs release; Kathmandu delivery dispatch will start after border handover",
+  lastUpdated: "23/05/2026 15:20:00",
+  delayHeadline: "Import policy verification in progress",
   delayReason:
-    "The shipment is with the local delivery team after Kathmandu hub processing. Final delivery is scheduled by 13/05/2026.",
+    "Nepal customs is applying additional document checks after the Customs Regulations, 2083 update and recent import-label compliance review. China-origin finished goods are being matched against HS code, invoice value, country of origin, and brand/MRP declaration requirements before release.",
   supportMessage:
-    "The shipment is now in the final delivery phase. The delivery team will complete handover by 13/05/2026.",
+    "The carrier has submitted the revised declaration and supporting commercial documents. Release is expected after customs risk-channel review, with final delivery planned by 02/06/2026.",
   events: [
     {
-      timestamp: "2026-03-20 10:05:00",
-      dateLabel: "2026-03-20",
+      timestamp: "2026-04-22 10:05:00",
+      dateLabel: "22/04/2026",
       timeLabel: "10:05:00",
       status: "Order Created",
       description:
@@ -77,8 +77,8 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-04 09:18:00",
-      dateLabel: "2026-04-04",
+      timestamp: "2026-04-27 09:18:00",
+      dateLabel: "27/04/2026",
       timeLabel: "09:18:00",
       status: "Pickup from Supplier Warehouse",
       description:
@@ -86,17 +86,17 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-10 14:40:00",
-      dateLabel: "2026-04-10",
+      timestamp: "2026-05-02 14:40:00",
+      dateLabel: "02/05/2026",
       timeLabel: "14:40:00",
       status: "Export Processing",
       description:
-        "Export declaration, line-haul packing list, and route documents were verified for road movement out of China.",
+        "Export declaration, packing list, HS details, and road movement documents were verified for dispatch out of China.",
       stage: "completed"
     },
     {
-      timestamp: "2026-04-15 11:55:00",
-      dateLabel: "2026-04-15",
+      timestamp: "2026-05-06 11:55:00",
+      dateLabel: "06/05/2026",
       timeLabel: "11:55:00",
       status: "Departed China Warehouse",
       description:
@@ -104,8 +104,8 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-20 18:10:00",
-      dateLabel: "2026-04-20",
+      timestamp: "2026-05-10 18:10:00",
+      dateLabel: "10/05/2026",
       timeLabel: "18:10:00",
       status: "In Transit by Road",
       description:
@@ -113,8 +113,8 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-23 09:35:00",
-      dateLabel: "2026-04-23",
+      timestamp: "2026-05-14 09:35:00",
+      dateLabel: "14/05/2026",
       timeLabel: "09:35:00",
       status: "Border Movement",
       description:
@@ -122,8 +122,8 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-25 14:05:00",
-      dateLabel: "2026-04-25",
+      timestamp: "2026-05-16 14:05:00",
+      dateLabel: "16/05/2026",
       timeLabel: "14:05:00",
       status: "Border Arrival Scan",
       description:
@@ -131,84 +131,84 @@ export const demoTrackingRecord: TrackingRecord = {
       stage: "completed"
     },
     {
-      timestamp: "2026-04-27 18:40:00",
-      dateLabel: "2026-04-27",
+      timestamp: "2026-05-18 18:40:00",
+      dateLabel: "18/05/2026",
       timeLabel: "18:40:00",
       status: "Awaiting Customs Review",
       description:
-        "Shipment reached the Nepal inbound processing point and was queued for customs inspection and paperwork matching.",
+        "Shipment reached the Nepal inbound processing point and was queued for customs risk-channel assignment and paperwork matching.",
       stage: "completed"
     },
     {
-      timestamp: "2026-04-30 16:45:00",
-      dateLabel: "2026-04-30",
+      timestamp: "2026-05-20 16:45:00",
+      dateLabel: "20/05/2026",
       timeLabel: "16:45:00",
-      status: "Held at Rasuwa Customs",
+      status: "Policy Compliance Hold",
       description:
-        "Shipment remains at Rasuwa Customs Office, Timure for import document verification. Once released, the carrier will dispatch it toward the Kathmandu delivery hub with an expected road transit time of 6-10 hours.",
+        "Shipment was held for additional import-policy verification linked to brand/MRP declaration, HS classification, and transaction-value checks for China-origin finished goods.",
       stage: "completed"
     },
     {
-      timestamp: "2026-05-01 16:20:00",
-      dateLabel: "2026-05-01",
+      timestamp: "2026-05-21 16:20:00",
+      dateLabel: "21/05/2026",
       timeLabel: "16:20:00",
-      status: "Customs Clearance Completed",
+      status: "Revised Documents Submitted",
       description:
-        "Customs clearance has been completed at Rasuwa Customs Office, Timure. The shipment is now awaiting carrier release from the customs yard and is scheduled to depart toward Kathmandu on May 2, 2026.",
+        "Carrier submitted the revised commercial invoice, packing list, origin details, and consignee declaration for customs verification.",
       stage: "completed"
     },
     {
-      timestamp: "2026-05-02 08:30:00",
-      dateLabel: "2026-05-02",
-      timeLabel: "08:30:00",
-      status: "Departed from Rasuwa Customs",
+      timestamp: "2026-05-23 15:20:00",
+      dateLabel: "23/05/2026",
+      timeLabel: "15:20:00",
+      status: "Customs Review In Progress",
       description:
-        "Carrier dispatch departed from Rasuwa Customs Office toward the Kathmandu delivery hub after customs release and yard handover.",
-      stage: "completed"
-    },
-    {
-      timestamp: "2026-05-05 18:35:00",
-      dateLabel: "2026-05-05",
-      timeLabel: "18:35:00",
-      status: "Kathmandu Hub Processing",
-      description:
-        "Shipment reached the Kathmandu delivery hub and was queued for local route planning.",
-      stage: "completed"
-    },
-    {
-      timestamp: "2026-05-09 14:30:00",
-      dateLabel: "09/05/2026",
-      timeLabel: "14:30:00",
-      status: "Delivery Slot Confirmed",
-      description:
-        "Shipment has been assigned to the local delivery team. Final delivery is scheduled by 13/05/2026.",
+        "Rasuwa Customs is reviewing the updated declaration under the current import compliance procedure. Release is pending final risk-channel confirmation.",
       stage: "current"
     },
     {
-      timestamp: "2026-05-10 10:00:00",
-      dateLabel: "10/05/2026",
+      timestamp: "2026-05-25 11:30:00",
+      dateLabel: "25/05/2026",
+      timeLabel: "11:30:00",
+      status: "Document Validation Window",
+      description:
+        "Customs document validation is expected to continue while the carrier responds to any remaining valuation or label-declaration query.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-05-28 13:00:00",
+      dateLabel: "28/05/2026",
+      timeLabel: "13:00:00",
+      status: "Expected Customs Decision",
+      description:
+        "Customs decision is expected after review of HS classification, declared value, and import-label compliance.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-05-30 17:30:00",
+      dateLabel: "30/05/2026",
+      timeLabel: "17:30:00",
+      status: "Border Release Window",
+      description:
+        "If no further query is raised, shipment is expected to be released from the border yard and handed to the Kathmandu line-haul team.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-01 10:00:00",
+      dateLabel: "01/06/2026",
       timeLabel: "10:00:00",
-      status: "Route Preparation",
+      status: "Kathmandu Hub Processing",
       description:
-        "Package sorting and final route preparation are planned for Kathmandu delivery operations.",
+        "After border release, shipment is expected to reach the Kathmandu hub for sorting and final route assignment.",
       stage: "upcoming"
     },
     {
-      timestamp: "2026-05-12 16:00:00",
-      dateLabel: "12/05/2026",
-      timeLabel: "16:00:00",
-      status: "Final Dispatch Window",
-      description:
-        "Shipment is scheduled to move into the final dispatch window before consignee handover.",
-      stage: "upcoming"
-    },
-    {
-      timestamp: "2026-05-13 18:00:00",
-      dateLabel: "13/05/2026",
+      timestamp: "2026-06-02 18:00:00",
+      dateLabel: "02/06/2026",
       timeLabel: "18:00:00",
       status: "Expected Delivery",
       description:
-        "Delivery is expected to be completed by 13/05/2026.",
+        "Delivery is expected to be completed by 02/06/2026 after customs release and Kathmandu final-mile dispatch.",
       stage: "upcoming"
     }
   ]
