@@ -61,7 +61,7 @@ export default function TrackingResult({ record }: TrackingResultProps) {
               {completedCount} of {record.events.length} shipment milestones logged
             </p>
             <p className="mt-1 text-sm text-slate-600">
-              Estimated delivery by {record.estimatedDelivery}
+              Delivery window {record.estimatedDelivery}
             </p>
             <p className="mt-1 text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
               Last updated {record.lastUpdated}

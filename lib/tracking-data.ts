@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Customs Policy Review",
-  deliveryLabel: "Expected delivery by 02/06/2026",
-  estimatedDelivery: "02/06/2026",
-  progressPercent: 72,
+  latestStatus: "Delivery Plan Updated",
+  deliveryLabel: "Delivery planned between 04/06/2026 and 06/06/2026",
+  estimatedDelivery: "04/06/2026 - 06/06/2026",
+  progressPercent: 82,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,13 +59,13 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "Pending customs release; Kathmandu delivery dispatch will start after border handover",
-  lastUpdated: "23/05/2026 15:20:00",
-  delayHeadline: "Import policy verification in progress",
+  postClearanceTransit: "Customs release plan received; Kathmandu delivery dispatch will start after border handover",
+  lastUpdated: "30/05/2026 17:30:00",
+  delayHeadline: "Delivery plan updated after import policy review",
   delayReason:
     "Nepal customs is applying additional document checks after the Customs Regulations, 2083 update and recent import-label compliance review. China-origin finished goods are being matched against HS code, invoice value, country of origin, and brand/MRP declaration requirements before release.",
   supportMessage:
-    "The carrier has submitted the revised declaration and supporting commercial documents. Release is expected after customs risk-channel review, with final delivery planned by 02/06/2026.",
+    "The carrier has received the updated release plan after document review. Border handover and Kathmandu dispatch are now planned for the first week of June, with delivery expected between 04/06/2026 and 06/06/2026.",
   events: [
     {
       timestamp: "2026-04-22 10:05:00",
@@ -164,7 +164,7 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Customs Review In Progress",
       description:
         "Rasuwa Customs is reviewing the updated declaration under the current import compliance procedure. Release is pending final risk-channel confirmation.",
-      stage: "current"
+      stage: "completed"
     },
     {
       timestamp: "2026-05-25 11:30:00",
@@ -173,42 +173,69 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Document Validation Window",
       description:
         "Customs document validation is expected to continue while the carrier responds to any remaining valuation or label-declaration query.",
-      stage: "upcoming"
+      stage: "completed"
     },
     {
       timestamp: "2026-05-28 13:00:00",
       dateLabel: "28/05/2026",
       timeLabel: "13:00:00",
-      status: "Expected Customs Decision",
+      status: "Customs Query Closed",
       description:
-        "Customs decision is expected after review of HS classification, declared value, and import-label compliance.",
-      stage: "upcoming"
+        "Carrier-side clarification was accepted for HS classification, declared value, and import-label compliance review.",
+      stage: "completed"
     },
     {
       timestamp: "2026-05-30 17:30:00",
       dateLabel: "30/05/2026",
       timeLabel: "17:30:00",
-      status: "Border Release Window",
+      status: "Delivery Plan Updated",
       description:
-        "If no further query is raised, shipment is expected to be released from the border yard and handed to the Kathmandu line-haul team.",
-      stage: "upcoming"
+        "Updated delivery plan was posted after import-policy document review. Border handover and Kathmandu dispatch are planned before the 04/06/2026 to 06/06/2026 delivery window.",
+      stage: "current"
     },
     {
       timestamp: "2026-06-01 10:00:00",
       dateLabel: "01/06/2026",
       timeLabel: "10:00:00",
+      status: "Border Release Window",
+      description:
+        "Shipment is planned for release from the border yard and handover to the Kathmandu line-haul team.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-03 12:00:00",
+      dateLabel: "03/06/2026",
+      timeLabel: "12:00:00",
       status: "Kathmandu Hub Processing",
       description:
         "After border release, shipment is expected to reach the Kathmandu hub for sorting and final route assignment.",
       stage: "upcoming"
     },
     {
-      timestamp: "2026-06-02 18:00:00",
-      dateLabel: "02/06/2026",
-      timeLabel: "18:00:00",
-      status: "Expected Delivery",
+      timestamp: "2026-06-04 10:00:00",
+      dateLabel: "04/06/2026",
+      timeLabel: "10:00:00",
+      status: "Delivery Window Opens",
       description:
-        "Delivery is expected to be completed by 02/06/2026 after customs release and Kathmandu final-mile dispatch.",
+        "Final-mile delivery window opens for consignee handover in Kathmandu.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-05 14:30:00",
+      dateLabel: "05/06/2026",
+      timeLabel: "14:30:00",
+      status: "Local Delivery Route",
+      description:
+        "Shipment is planned for local route movement during the active delivery window.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-06 18:00:00",
+      dateLabel: "06/06/2026",
+      timeLabel: "18:00:00",
+      status: "Latest Delivery Commitment",
+      description:
+        "Delivery is expected to be completed by 06/06/2026 if the first delivery attempt cannot be completed earlier in the 04/06/2026 to 06/06/2026 window.",
       stage: "upcoming"
     }
   ]
