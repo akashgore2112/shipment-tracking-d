@@ -61,7 +61,7 @@ export default function TrackingResult({ record }: TrackingResultProps) {
               {completedCount} of {record.events.length} shipment milestones logged
             </p>
             <p className="mt-1 text-sm text-slate-600">
-              Delivery window {record.estimatedDelivery}
+              Delivery plan {record.estimatedDelivery}
             </p>
             <p className="mt-1 text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
               Last updated {record.lastUpdated}
@@ -101,7 +101,7 @@ export default function TrackingResult({ record }: TrackingResultProps) {
               </p>
             </div>
             <span className="inline-flex items-center rounded-full border border-amber-300 bg-white px-3 py-1.5 text-sm font-semibold text-amber-700">
-              Delivery update
+              Approval update
             </span>
           </div>
           <p className="mt-4 rounded-2xl bg-white/80 px-4 py-3 text-sm text-slate-700">

@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Delivery Plan Updated",
-  deliveryLabel: "Delivery planned between 04/06/2026 and 06/06/2026",
-  estimatedDelivery: "04/06/2026 - 06/06/2026",
-  progressPercent: 82,
+  latestStatus: "Government Approval Pending",
+  deliveryLabel: "Dispatch decision expected within 1-2 days",
+  estimatedDelivery: "Pending government approval",
+  progressPercent: 76,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,13 +59,13 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "Customs release plan received; Kathmandu delivery dispatch will start after border handover",
-  lastUpdated: "30/05/2026 17:30:00",
-  delayHeadline: "Delivery plan updated after import policy review",
+  postClearanceTransit: "Kathmandu dispatch is on hold until government approval is received",
+  lastUpdated: "08/06/2026 16:40:00",
+  delayHeadline: "Government approval still pending",
   delayReason:
-    "Nepal customs is applying additional document checks after the Customs Regulations, 2083 update and recent import-label compliance review. China-origin finished goods are being matched against HS code, invoice value, country of origin, and brand/MRP declaration requirements before release.",
+    "Government approval for this China-origin shipment has not been received yet. The shipment remains on hold while Nepal authorities review import-policy compliance, package labeling, HS classification, invoice value, country of origin, and consignee declaration details.",
   supportMessage:
-    "The carrier has received the updated release plan after document review. Border handover and Kathmandu dispatch are now planned for the first week of June, with delivery expected between 04/06/2026 and 06/06/2026.",
+    "If approval is received within the next 1-2 days, the material will be released for Kathmandu dispatch. If approval is not received, the shipment must be returned to China for package and document updates under Nepal government guidelines before it can be sent again.",
   events: [
     {
       timestamp: "2026-04-22 10:05:00",
@@ -191,51 +191,96 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Delivery Plan Updated",
       description:
         "Updated delivery plan was posted after import-policy document review. Border handover and Kathmandu dispatch are planned before the 04/06/2026 to 06/06/2026 delivery window.",
-      stage: "current"
+      stage: "completed"
     },
     {
       timestamp: "2026-06-01 10:00:00",
       dateLabel: "01/06/2026",
       timeLabel: "10:00:00",
-      status: "Border Release Window",
+      status: "Approval Follow-Up Submitted",
       description:
-        "Shipment is planned for release from the border yard and handover to the Kathmandu line-haul team.",
-      stage: "upcoming"
+        "Carrier submitted a follow-up request for government approval and reconfirmed the shipment documents for final review.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-03 12:00:00",
       dateLabel: "03/06/2026",
       timeLabel: "12:00:00",
-      status: "Kathmandu Hub Processing",
+      status: "Review Extended",
       description:
-        "After border release, shipment is expected to reach the Kathmandu hub for sorting and final route assignment.",
-      stage: "upcoming"
+        "Approval review was extended because authorities continued checking package labeling, declared value, origin details, and import-policy compliance.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-04 10:00:00",
       dateLabel: "04/06/2026",
       timeLabel: "10:00:00",
-      status: "Delivery Window Opens",
+      status: "Delivery Window Put On Hold",
       description:
-        "Final-mile delivery window opens for consignee handover in Kathmandu.",
-      stage: "upcoming"
+        "The planned 04/06/2026 to 06/06/2026 delivery window was placed on hold because government approval had not been issued.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-05 14:30:00",
       dateLabel: "05/06/2026",
       timeLabel: "14:30:00",
-      status: "Local Delivery Route",
+      status: "Carrier Response Filed",
       description:
-        "Shipment is planned for local route movement during the active delivery window.",
-      stage: "upcoming"
+        "Carrier filed an additional response confirming package count, invoice value, HS code, and China origin details for the held material.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-06 18:00:00",
       dateLabel: "06/06/2026",
       timeLabel: "18:00:00",
-      status: "Latest Delivery Commitment",
+      status: "Delivery Window Missed",
       description:
-        "Delivery is expected to be completed by 06/06/2026 if the first delivery attempt cannot be completed earlier in the 04/06/2026 to 06/06/2026 window.",
+        "Delivery could not proceed within the earlier commitment window because the shipment had not received government release approval.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-06-08 16:40:00",
+      dateLabel: "08/06/2026",
+      timeLabel: "16:40:00",
+      status: "Government Approval Pending",
+      description:
+        "Approval has not been received yet. If approval is issued within 1-2 days, the material will be released for Kathmandu dispatch.",
+      stage: "current"
+    },
+    {
+      timestamp: "2026-06-09 12:00:00",
+      dateLabel: "09/06/2026",
+      timeLabel: "12:00:00",
+      status: "Approval Follow-Up Window",
+      description:
+        "Carrier will continue follow-up with the government desk and hold the shipment at the border facility until a release decision is received.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-10 17:00:00",
+      dateLabel: "10/06/2026",
+      timeLabel: "17:00:00",
+      status: "Conditional Kathmandu Dispatch",
+      description:
+        "If approval is received, the shipment will be handed over for Kathmandu line-haul movement and final delivery planning.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-11 11:00:00",
+      dateLabel: "11/06/2026",
+      timeLabel: "11:00:00",
+      status: "Return-to-China Contingency",
+      description:
+        "If approval is not received, the shipment must be returned to China so the packages and supporting documents can be updated as per Nepal government guidelines.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-14 15:00:00",
+      dateLabel: "14/06/2026",
+      timeLabel: "15:00:00",
+      status: "Compliance Update and Re-Dispatch",
+      description:
+        "After the package and document updates are completed in China, the shipment can be prepared for re-dispatch to Nepal under the corrected compliance file.",
       stage: "upcoming"
     }
   ]
