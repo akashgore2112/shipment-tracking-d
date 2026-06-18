@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Government Approval Pending",
-  deliveryLabel: "Dispatch decision expected within 1-2 days",
-  estimatedDelivery: "Pending government approval",
-  progressPercent: 76,
+  latestStatus: "Returning to China",
+  deliveryLabel: "Estimated Nepal arrival by 06/08/2026",
+  estimatedDelivery: "By 06/08/2026",
+  progressPercent: 48,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,13 +59,13 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "Kathmandu dispatch is on hold until government approval is received",
-  lastUpdated: "08/06/2026 16:40:00",
-  delayHeadline: "Government approval still pending",
+  postClearanceTransit: "Shipment is returning to China for MRP-label and package compliance updates before re-dispatch to Nepal",
+  lastUpdated: "18/06/2026 16:30:00",
+  delayHeadline: "Shipment returned for Nepal import-compliance updates",
   delayReason:
-    "Government approval for this China-origin shipment has not been received yet. The shipment remains on hold while Nepal authorities review import-policy compliance, package labeling, HS classification, invoice value, country of origin, and consignee declaration details.",
+    "The shipment was not approved for onward movement to Kathmandu in its current condition. It is being returned to China so the packages, MRP labels, and supporting documents can be updated to match the current Nepal government import-compliance requirements.",
   supportMessage:
-    "If approval is received within the next 1-2 days, the material will be released for Kathmandu dispatch. If approval is not received, the shipment must be returned to China for package and document updates under Nepal government guidelines before it can be sent again.",
+    "The return shipment is expected to reach China by 19/06/2026. Package relabeling and document updates are planned within three days, followed by re-dispatch from China to Nepal on 22/06/2026. Nepal arrival is estimated within 45 days of re-dispatch, by 06/08/2026.",
   events: [
     {
       timestamp: "2026-04-22 10:05:00",
@@ -245,7 +245,7 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Government Approval Pending",
       description:
         "Approval has not been received yet. If approval is issued within 1-2 days, the material will be released for Kathmandu dispatch.",
-      stage: "current"
+      stage: "completed"
     },
     {
       timestamp: "2026-06-09 12:00:00",
@@ -254,33 +254,78 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Approval Follow-Up Window",
       description:
         "Carrier will continue follow-up with the government desk and hold the shipment at the border facility until a release decision is received.",
-      stage: "upcoming"
+      stage: "completed"
     },
     {
       timestamp: "2026-06-10 17:00:00",
       dateLabel: "10/06/2026",
       timeLabel: "17:00:00",
-      status: "Conditional Kathmandu Dispatch",
+      status: "Kathmandu Dispatch Not Approved",
       description:
-        "If approval is received, the shipment will be handed over for Kathmandu line-haul movement and final delivery planning.",
-      stage: "upcoming"
+        "The shipment was not approved for onward movement to Kathmandu under the submitted package-label and compliance file.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-11 11:00:00",
       dateLabel: "11/06/2026",
       timeLabel: "11:00:00",
-      status: "Return-to-China Contingency",
+      status: "Return-to-China Decision",
       description:
-        "If approval is not received, the shipment must be returned to China so the packages and supporting documents can be updated as per Nepal government guidelines.",
-      stage: "upcoming"
+        "The carrier was instructed to return the shipment to China for package, MRP-label, and document updates under Nepal government import requirements.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-14 15:00:00",
       dateLabel: "14/06/2026",
       timeLabel: "15:00:00",
-      status: "Compliance Update and Re-Dispatch",
+      status: "Return Movement Started",
       description:
-        "After the package and document updates are completed in China, the shipment can be prepared for re-dispatch to Nepal under the corrected compliance file.",
+        "The shipment was handed to the return carrier and started moving back toward the China processing facility.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-06-18 16:30:00",
+      dateLabel: "18/06/2026",
+      timeLabel: "16:30:00",
+      status: "Returning to China",
+      description:
+        "The shipment is in return transit and is expected to reach the China processing facility by 19/06/2026.",
+      stage: "current"
+    },
+    {
+      timestamp: "2026-06-19 18:00:00",
+      dateLabel: "19/06/2026",
+      timeLabel: "18:00:00",
+      status: "Expected Arrival in China",
+      description:
+        "The returned material is expected to arrive at the China processing facility for compliance rework.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-20 10:00:00",
+      dateLabel: "20/06/2026",
+      timeLabel: "10:00:00",
+      status: "MRP Label and Package Update",
+      description:
+        "The China operations team will update MRP labels, package declarations, and supporting documents to match Nepal import-compliance requirements.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-06-22 17:00:00",
+      dateLabel: "22/06/2026",
+      timeLabel: "17:00:00",
+      status: "Planned Re-Dispatch to Nepal",
+      description:
+        "After the three-day compliance update, the corrected shipment is planned for re-dispatch from China to Nepal.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-08-06 18:00:00",
+      dateLabel: "06/08/2026",
+      timeLabel: "18:00:00",
+      status: "Estimated Nepal Arrival",
+      description:
+        "The shipment is estimated to arrive in Nepal within 45 days of the 22/06/2026 re-dispatch, subject to transit and border-clearance conditions.",
       stage: "upcoming"
     }
   ]
