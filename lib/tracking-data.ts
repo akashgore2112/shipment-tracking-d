@@ -40,10 +40,10 @@ export const DEMO_TRACKING_NUMBER = "EE183915739CN";
 
 export const demoTrackingRecord: TrackingRecord = {
   trackingNumber: DEMO_TRACKING_NUMBER,
-  latestStatus: "Returning to China",
-  deliveryLabel: "Estimated Nepal arrival by 06/08/2026",
-  estimatedDelivery: "By 06/08/2026",
-  progressPercent: 48,
+  latestStatus: "Redelivery Arranged",
+  deliveryLabel: "Expected receipt between 31/07/2026 and 10/08/2026",
+  estimatedDelivery: "31/07/2026 - 10/08/2026",
+  progressPercent: 86,
   serviceType: "Cross-Border Road Express",
   origin: "Guangzhou, China",
   destination: "Kathmandu, Nepal",
@@ -59,13 +59,13 @@ export const demoTrackingRecord: TrackingRecord = {
   invoiceValue: "USD 2,530.00",
   customsOffice: "Rasuwa Customs Office",
   customsOfficeAddress: "Timure, Rasuwa, Nepal",
-  postClearanceTransit: "Shipment is returning to China for MRP-label and package compliance updates before re-dispatch to Nepal",
-  lastUpdated: "18/06/2026 16:30:00",
-  delayHeadline: "Shipment returned for Nepal import-compliance updates",
+  postClearanceTransit: "Redelivery from China has been arranged after MRP-label and package compliance updates",
+  lastUpdated: "21/07/2026 14:25:00",
+  delayHeadline: "Redelivery arranged from China",
   delayReason:
-    "The shipment was not approved for onward movement to Kathmandu in its current condition. It is being returned to China so the packages, MRP labels, and supporting documents can be updated to match the current Nepal government import-compliance requirements.",
+    "The shipment was returned to China and reworked under the updated Nepal government import-compliance requirements. MRP labels, package declarations, invoice references, and supporting documents have been updated for the corrected re-delivery movement.",
   supportMessage:
-    "The return shipment is expected to reach China by 19/06/2026. Package relabeling and document updates are planned within three days, followed by re-dispatch from China to Nepal on 22/06/2026. Nepal arrival is estimated within 45 days of re-dispatch, by 06/08/2026.",
+    "The latest update was received on 21/07/2026. Redelivery from China has been arranged, and the order is expected to be received between 31/07/2026 and 10/08/2026, subject to final transit and border handover timing.",
   events: [
     {
       timestamp: "2026-04-22 10:05:00",
@@ -290,16 +290,16 @@ export const demoTrackingRecord: TrackingRecord = {
       status: "Returning to China",
       description:
         "The shipment is in return transit and is expected to reach the China processing facility by 19/06/2026.",
-      stage: "current"
+      stage: "completed"
     },
     {
       timestamp: "2026-06-19 18:00:00",
       dateLabel: "19/06/2026",
       timeLabel: "18:00:00",
-      status: "Expected Arrival in China",
+      status: "Returned to China Facility",
       description:
-        "The returned material is expected to arrive at the China processing facility for compliance rework.",
-      stage: "upcoming"
+        "The returned material reached the China processing facility for compliance rework.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-20 10:00:00",
@@ -307,25 +307,124 @@ export const demoTrackingRecord: TrackingRecord = {
       timeLabel: "10:00:00",
       status: "MRP Label and Package Update",
       description:
-        "The China operations team will update MRP labels, package declarations, and supporting documents to match Nepal import-compliance requirements.",
-      stage: "upcoming"
+        "The China operations team started updating MRP labels, package declarations, and supporting documents to match Nepal import-compliance requirements.",
+      stage: "completed"
     },
     {
       timestamp: "2026-06-22 17:00:00",
       dateLabel: "22/06/2026",
       timeLabel: "17:00:00",
-      status: "Planned Re-Dispatch to Nepal",
+      status: "Compliance Rework Opened",
       description:
-        "After the three-day compliance update, the corrected shipment is planned for re-dispatch from China to Nepal.",
+        "The corrected compliance file was opened for MRP label, package declaration, and export-document reconciliation.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-06-27 12:10:00",
+      dateLabel: "27/06/2026",
+      timeLabel: "12:10:00",
+      status: "MRP Label Verification",
+      description:
+        "Updated MRP label details were checked against package count, item declaration, invoice value, and Nepal import-compliance notes.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-07-02 15:45:00",
+      dateLabel: "02/07/2026",
+      timeLabel: "15:45:00",
+      status: "Package Relabeling Completed",
+      description:
+        "Package relabeling and carton-level declaration updates were completed at the China processing facility.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-07-06 11:20:00",
+      dateLabel: "06/07/2026",
+      timeLabel: "11:20:00",
+      status: "Revised Documents Prepared",
+      description:
+        "Revised invoice references, packing list, origin details, and shipment declaration were prepared for the corrected Nepal movement.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-07-10 16:05:00",
+      dateLabel: "10/07/2026",
+      timeLabel: "16:05:00",
+      status: "Carrier Booking Requested",
+      description:
+        "Carrier booking was requested for the re-delivery movement from China to Nepal after compliance updates.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-07-14 13:30:00",
+      dateLabel: "14/07/2026",
+      timeLabel: "13:30:00",
+      status: "China Warehouse QA Check",
+      description:
+        "Final warehouse quality check confirmed the updated labels, cartons, and documents were ready for re-delivery booking.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-07-18 17:00:00",
+      dateLabel: "18/07/2026",
+      timeLabel: "17:00:00",
+      status: "Line-Haul Allocation",
+      description:
+        "The corrected shipment was allocated to the China-to-Nepal line-haul schedule.",
+      stage: "completed"
+    },
+    {
+      timestamp: "2026-07-21 14:25:00",
+      dateLabel: "21/07/2026",
+      timeLabel: "14:25:00",
+      status: "Redelivery Arranged",
+      description:
+        "Redelivery from China has been arranged. The order is expected to be received between 31/07/2026 and 10/08/2026.",
+      stage: "current"
+    },
+    {
+      timestamp: "2026-07-24 09:30:00",
+      dateLabel: "24/07/2026",
+      timeLabel: "09:30:00",
+      status: "Re-Dispatch Handover",
+      description:
+        "Shipment is scheduled for carrier handover from the China warehouse for the corrected Nepal re-delivery movement.",
       stage: "upcoming"
     },
     {
-      timestamp: "2026-08-06 18:00:00",
-      dateLabel: "06/08/2026",
-      timeLabel: "18:00:00",
-      status: "Estimated Nepal Arrival",
+      timestamp: "2026-07-28 18:15:00",
+      dateLabel: "28/07/2026",
+      timeLabel: "18:15:00",
+      status: "In Transit to Nepal",
       description:
-        "The shipment is estimated to arrive in Nepal within 45 days of the 22/06/2026 re-dispatch, subject to transit and border-clearance conditions.",
+        "Shipment is expected to move through the China-to-Nepal transit lane after carrier handover.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-07-31 10:00:00",
+      dateLabel: "31/07/2026",
+      timeLabel: "10:00:00",
+      status: "Receiving Window Opens",
+      description:
+        "The expected receiving window opens for the corrected shipment.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-08-05 14:00:00",
+      dateLabel: "05/08/2026",
+      timeLabel: "14:00:00",
+      status: "Nepal Handover Window",
+      description:
+        "Shipment is expected to be in the Nepal handover window for local processing and receipt planning.",
+      stage: "upcoming"
+    },
+    {
+      timestamp: "2026-08-10 18:00:00",
+      dateLabel: "10/08/2026",
+      timeLabel: "18:00:00",
+      status: "Latest Expected Receipt",
+      description:
+        "The order is expected to be received by 10/08/2026 if the first receipt attempt cannot be completed earlier in the 31/07/2026 to 10/08/2026 window.",
       stage: "upcoming"
     }
   ]
